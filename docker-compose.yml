@@ -7,7 +7,7 @@ services:
       - ./mysql:/var/lib/mysql
     env_file: .env
     ports:
-      - "3307:3306"
+      - 3307:3306
 
   app:
     build: php
@@ -29,9 +29,9 @@ services:
     depends_on:
       - mysql
     ports:
-      - 3060:80
+      - 3002:80
     volumes:
-      - "./phpmyadmin/sessions:/sessions"
+      - ./phpmyadmin/sessions:/sessions
 
   bs:
     image: ustwo/browser-sync
@@ -41,5 +41,5 @@ services:
     depends_on:
       - nginx
     ports:
-      - "3000:3000"
-      - "3001:3001"
+      - 3000:3000
+      - 3001:3001
