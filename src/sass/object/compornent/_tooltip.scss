@@ -1,0 +1,110 @@
+//=====================================================
+//
+// tooltip Style
+//
+// =====================================================
+
+// tooltip
+// ================================== //
+.c-tooltip {
+
+  position: relative;
+
+  &::before, &::after {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    transition: all .35s;
+    pointer-events: none;
+  }// &::before, &::after;
+  &::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    display: block;
+    background-color: $tooltip_bg_color;
+    padding: .375rem 1rem;
+    border-radius: .25rem;
+    color: $tooltip_txt_color;
+    line-height: 1.2;
+    white-space: pre;
+  }// &::before;
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }// &::after;
+
+  &:hover {
+    &::before, &::after {
+      opacity: 1;
+    }// &::before, &::after;
+  }// &:hover;
+
+  &-top {
+    &::before {
+      bottom: calc(100% + .5rem);
+      left: 50%;
+      transform: translateX(-50%);
+    }// &::before;
+    &::after {
+      bottom: 100%;
+      left: 50%;
+      margin-left: -.5rem;
+      border-width: .5rem .5rem 0;
+      border-color: $tooltip_bg_color transparent transparent;
+    }// &::after;
+  }// &-top
+  &-right {
+    &::before {
+      top: 50%;
+      left: calc(100% + .5rem);
+      transform: translateY(-50%);
+    }// &::before;
+    &::after {
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      border-width: .5rem .5rem .5rem 0;
+      border-color: transparent $tooltip_bg_color transparent transparent;
+    }// &::after;
+  }// &-right
+  &-bottom {
+    &::before {
+      top: calc(100% + .5rem);
+      left: 50%;
+      transform: translateX(-50%);
+    }// &::before;
+    &::after {
+      top: 100%;
+      left: 50%;
+      margin-left: -.5rem;
+      border-width: 0 .5rem .5rem;
+      border-color: transparent transparent $tooltip_bg_color;
+    }// &::after;
+  }// &-bottom
+  &-left {
+    &::before {
+      top: 50%;
+      right: calc(100% + .5rem);
+      transform: translateY(-50%);
+    }// &::before;
+    &::after {
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+      border-width: .5rem 0 .5rem .5rem;
+      border-color: transparent transparent transparent $tooltip_bg_color;
+    }// &::after;
+  }// &-left
+
+  @include mq(sp, max, true) {
+  }// @include mq(sp, max, true)
+  @include mq(tab) {
+  }// @include mq(tab)
+  @include mq(pc) {
+  }// @include mq(pc)
+  @include mq(wide) {
+  }// @include mq(wide)
+}// .c-tooltip

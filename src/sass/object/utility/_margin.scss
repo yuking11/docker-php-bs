@@ -1,0 +1,36 @@
+@if $use_css_utility {
+// -------------------------------------------
+// Utility - margin
+// -------------------------------------------
+
+  @for $i from 0 through 10 {
+    .u-mg#{$i * 5} { margin: 5px * $i !important; }
+    .u-mt#{$i * 5} { margin-top: 5px * $i !important; }
+    .u-mr#{$i * 5} { margin-right: 5px * $i !important; }
+    .u-mb#{$i * 5} { margin-bottom: 5px * $i !important; }
+    .u-ml#{$i * 5} { margin-left: 5px * $i !important; }
+    .u-mg#{$i}e { margin: #{$i}em !important; }
+    .u-mt#{$i}e { margin-top: #{$i}em !important; }
+    .u-mr#{$i}e { margin-right: #{$i}em !important; }
+    .u-mb#{$i}e { margin-bottom: #{$i}em !important; }
+    .u-ml#{$i}e { margin-left: #{$i}em !important; }
+  }
+  .u-mga { margin: auto !important; }
+  .u-mta { margin-top: auto !important; }
+  .u-mra { margin-right: auto !important; }
+  .u-mba { margin-bottom: auto !important; }
+  .u-mla { margin-left: auto !important; }
+  @for $i from 0 through 10 {
+    .u-pd#{$i * 5} { padding: 5px * $i !important; }
+    .u-pt#{$i * 5} { padding-top: 5px * $i !important; }
+    .u-pr#{$i * 5} { padding-right: 5px * $i !important; }
+    .u-pb#{$i * 5} { padding-bottom: 5px * $i !important; }
+    .u-pl#{$i * 5} { padding-left: 5px * $i !important; }
+    .u-pg#{$i}e { padding: #{$i}em !important; }
+    .u-pt#{$i}e { padding-top: #{$i}em !important; }
+    .u-pr#{$i}e { padding-right: #{$i}em !important; }
+    .u-pb#{$i}e { padding-bottom: #{$i}em !important; }
+    .u-pl#{$i}e { padding-left: #{$i}em !important; }
+  }
+
+}

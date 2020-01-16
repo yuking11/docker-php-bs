@@ -1,0 +1,110 @@
+// =====================================================
+//
+// codeguide用 Style
+//
+// =====================================================
+
+.test {
+  // @include grad;
+  // background: linear-gradient(to left, #f00, #00f, #0f0);
+  // @include hr(#f00, #00f, 10px);
+  // @include trs;
+  // user-select: none;
+  // appearance: none;
+  // @include angled-edge
+}//.test
+
+.sample_img {
+  background-size: cover;
+  height: 200px;
+}// .sample_img
+
+.no-effect {
+  background: url('../img/sample.jpg') no-repeat left top;
+}// .no-effect
+
+.pencil-effect {
+  @include pencil-effect('../img/sample.jpg');
+}// .pencil-effect
+
+.watercolor-effect {
+  @include watercolor-effect('../img/sample.jpg');
+}// .watercolor-effect
+
+.emboss-effect {
+  @include emboss-effect('../img/sample.jpg');
+}// .emboss-effect
+
+.colored-pencil-effect {
+  @include colored-pencil-effect('../img/sample.jpg');
+}// .colored-pencil-effect
+
+.chalkboard-effect {
+  @include chalkboard-effect('../img/sample.jpg');
+}// .chalkboard-effect
+
+.colored-chalkboard-effect {
+  @include colored-chalkboard-effect('../img/sample.jpg');
+}// .colored-chalkboard-effect
+
+.airbrush-effect {
+  @include airbrush-effect('../img/sample.jpg');
+}// .airbrush-effect
+
+.hallucination-effect {
+  @include hallucination-effect('../img/sample.jpg');
+}// .hallucination-effect
+
+.flannel-effect {
+  @include flannel-effect('../img/sample.jpg');
+}// .flannel-effect
+
+.low-ink-x-effect {
+  @include low-ink-x-effect('../img/sample.jpg');
+}// .low-ink-x-effect
+
+.low-ink-y-effect {
+  @include low-ink-y-effect('../img/sample.jpg');
+}// .low-ink-y-effect
+
+.collage-effect {
+  @include collage-effect('../img/sample.jpg');
+}// .collage-effect
+
+.mosaic-effect {
+  @include mosaic-effect('../img/sample.jpg');
+}// .mosaic-effect
+
+.photo-border-effect {
+  @include photo-border-effect('../img/sample.jpg');
+}// .photo-border-effect
+
+.infrared-effect {
+  @include infrared-effect('../img/sample.jpg');
+}// .infrared-effect
+
+.night-vision-effect {
+  @include night-vision-effect('../img/sample.jpg');
+}// .night-vision-effect
+
+.warhol-effect {
+  @include warhol-effect('../img/sample.jpg');
+}// .warhol-effect
+
+.selective-color-effect {
+  @include selective-color-effect('../img/sample.jpg');
+}// .selective-color-effect
+
+.mirror-x-effect {
+  @include mirror-x-effect('../img/sample.jpg');
+}// .mirror-x-effect
+
+.mirror-y-effect {
+  @include mirror-y-effect('../img/sample.jpg');
+}// .mirror-y-effect
+
+.test_hogege {
+  display: grid;
+  width: width('img/sample.jpg');
+  height: height('img/sample.jpg');
+}

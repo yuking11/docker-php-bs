@@ -1,0 +1,50 @@
+//=====================================================
+//
+// card Style
+//
+// =====================================================
+
+// card
+// ================================== //
+.c-card {
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $card_bdr_color;
+  border-radius: .25rem;
+
+  .c-card_img {
+    width: 100%;
+    height: auto;
+  }// .c-card_img
+
+  .c-card_body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.25rem 1.25rem;
+  }// .c-card_body
+
+  .c-card_ttl {
+    margin-bottom: .75rem;
+    font-size: fs(18);
+    font-weight: bold;
+    line-height: 1.2;
+  }// .c-card_ttl
+
+  .c-card_txt {
+    line-height: 1.4;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }// &:not(:last-child);
+  }// .c-card_txt
+
+  @include mq(sp, max, true) {
+  }// @include mq(sp, max, true)
+  @include mq(tab) {
+  }// @include mq(tab)
+  @include mq(pc) {
+  }// @include mq(pc)
+  @include mq(wide) {
+  }// @include mq(wide)
+}// .c-card

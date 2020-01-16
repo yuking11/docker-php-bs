@@ -1,0 +1,38 @@
+//=====================================================
+//
+// Title Style
+//
+// =====================================================
+
+// Primary
+// ================================== //
+.c-ttl-primary {
+  @include mq(tab) {
+  }// @include mq(tab)
+  @include mq(pc) {
+  }// @include mq(pc)
+  @include mq(wide) {
+  }// @include mq(wide)
+}// .c-ttl-primary
+
+// Secondary
+// ================================== //
+.c-ttl-secondary {
+  @include mq(tab) {
+  }// @include mq(tab)
+  @include mq(pc) {
+  }// @include mq(pc)
+  @include mq(wide) {
+  }// @include mq(wide)
+}// .c-ttl-secondary
+
+// Tertiary
+// ================================== //
+.c-ttl-tertiary {
+  @include mq(tab) {
+  }// @include mq(tab)
+  @include mq(pc) {
+  }// @include mq(pc)
+  @include mq(wide) {
+  }// @include mq(wide)
+}// .c-ttl-tertiary

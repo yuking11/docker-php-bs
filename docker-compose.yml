@@ -35,7 +35,7 @@ services:
 
   bs:
     image: ustwo/browser-sync
-    command: start --proxy "nginx:8000" --files "app/**/*.php,app/**/*.css"
+    command: start --proxy "nginx:8000" --files "app/**/*.php,app/**/*.css,app/**/*.js"
     volumes:
       - ./app:/source/app
     depends_on:
@@ -43,3 +43,12 @@ services:
     ports:
       - 3000:3000
       - 3001:3001
+
+  webpack:
+    build: ./docker/webpack
+    volumes:
+      - ./src:/webpack/src
+      - ./app:/webpack/app
+      - ./docker/webpack/package.json:/webpack/package.json
+      - ./docker/webpack/webpack.config.js:/webpack/webpack.config.js
+      - ./docker/webpack/webpack.config.prod.js:/webpack/webpack.config.prod.js

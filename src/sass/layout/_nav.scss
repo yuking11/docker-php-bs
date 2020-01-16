@@ -1,0 +1,262 @@
+// =====================================================
+//
+// nav Style
+//
+// =====================================================
+
+// Gnavi
+// ================================== //
+.l-nav {
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1200;
+
+  @include mq(sp, max, true) {
+  }// @include mq(sp, max, true)
+  @include mq(tab) {
+  }// @include mq(tab)
+  @include mq(pc) {
+  }// @include mq(pc)
+}// .l-nav
+
+// nav toggle
+// ================================== //
+// コントローラー
+#gnav-ctrl {
+
+  display: none;
+
+  &:checked {
+    ~ .gnav-btn {
+      background-color: $color_white;
+      border-color: $color_black;
+      &::before {
+        border-top-color: $color_black;
+        transform: rotate(45deg);
+      }// &::before
+      &::after {
+        border-top-color: $color_black;
+        transform: rotate(-45deg);
+      }// &::after
+      .gnav-btn_inner {
+        opacity: 0;
+      }// .gnav-btn_inner
+    }// ~ .gnav-btn
+    ~ .gnav {
+      right: 0;
+      transition-delay: .2s;
+    }// ~ .gnav
+    ~ .gnav-overlay {
+      right: 0;
+      transition-delay: 0;
+    }// ~ .gnav-overlay
+  }// &:checked
+
+  @include mq(sp, max, true) {
+  }// @include mq(sp, max, true)
+  @include mq(pc) {
+  }// @include mq(pc)
+}// #gnav-ctrl
+
+// button
+.gnav-btn {
+
+  position: fixed;
+  top: ($header_height_sp - 32) / 2;
+  right: $ct_gutter;
+  z-index: 1600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color_white;
+  border-radius: 4px;
+  transition: all .35s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 18px;
+    height: 0;
+    margin: auto;
+    border-top: 2px solid $color_white;
+    transition: all .35s ease-out;
+  }// &::before,&::after
+
+  .gnav-btn_inner {
+    width: 18px;
+    height: 14px;
+    border-top: 2px solid $color_white;
+    border-bottom: 2px solid $color_white;
+    transition: all .35s ease-out;
+  }// .gnav-btn_inner
+
+  @include mq(sp, max, true) {
+  }// @include mq(sp, max, true)
+  @include mq(tab) {
+    top: ($header_height_pc - 32) / 2;
+  }// @include mq(tab)
+  @include mq(pc) {
+  }// @include mq(pc)
+}// .gnav-btn
+
+// bg
+.gnav-overlay {
+
+  position: absolute;
+  top: -20px;
+  right: -150vw;
+  z-index: 900;
+  display: block;
+  background-color: rgba(#000, .65);
+  width: 150vw;
+  height: 120vh;
+  cursor: pointer;
+  transition: all .5s;
+
+  @include mq(sp, max, true) {
+  }// @include mq(sp, max, true)
+  @include mq(tab) {
+  }// @include mq(tab)
+  @include mq(pc) {
+  }// @include mq(pc)
+}// .gnav-overlay
+
+
+// gnav
+// ================================== //
+.gnav {
+
+  position: absolute;
+  top: 0;
+  right: -80vw;
+  z-index: 1000;
+  width: 80vw;
+  height: 96vh;
+  padding: $header_height_sp 0 0;
+  overflow-y: scroll;
+  background-color: $color_white;
+  transition: all .35s;
+  transition-delay: 0;
+
+  .gnav_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #CCC;
+    .gnav_item {
+      border-bottom: 1px solid #CCC;
+    }// .gnav_item
+    .gnav_link {
+      display: block;
+      padding: $ct_gutter_half $ct_gutter;
+      color: $color_black;
+      font-size: fs(14);
+      text-decoration: none;
+      transition: all .35s;
+      &:hover,
+      &.is-hover {
+        background-color: #EEE;
+      }// &:hover, &.is-hover
+    }// .gnav_link
+
+    .gnav_item-dd {
+      position: relative;
+      .gnav_link {
+        padding-right: 46px;
+      }// .gnav_link
+    }// .gnav_item-dd
+    .gnav_dd-ctrl {
+      display: none;
+      &:checked {
+        ~ .gnav-sub_btn {
+          &::before {
+            transform: rotate(360deg);
+          }// &::before
+          &::after {
+            opacity: 0;
+            transform: rotate(360deg);
+          }// &::after;
+        }// ~ .gnav-sub_btn
+        ~ .gnav-sub {
+          height: auto;
+          max-height: 50px * 5;
+        }// ~ .gnav-sub
+      }// &:checked
+    }// .gnav_dd-ctrl
+    .gnav-sub_btn {
+      position: absolute;
+      top: 7px;
+      right: 10px;
+      z-index: 100;
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-color: $color_black;
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        background-color: $color_white;
+        width: 60%;
+        height: 2px;
+        margin: auto;
+        transition: all .35s;
+      }// &::before, &::after;
+      &::after {
+        transform: rotate(90deg);
+      }// &::after;
+    }// .gnav-sub_btn
+    .gnav-sub {
+      max-height: 0;
+      overflow: hidden;
+      transition: all .5s;
+    }// .gnav-sub
+    .gnav-sub_item {
+      border-top: 1px solid #CCC;
+      .gnav_link {
+        padding-left: $ct_gutter * 1.5;
+      }// .gnav_link
+    }// .gnav-sub_item
+  }// .gnav_list
+
+  @include mq(sp, max, true) {
+  }// @include mq(sp, max, true)
+  @include mq(tab) {
+
+    .gnav_list {
+      .gnav_link {
+        padding: $ct_gutter;
+        font-size: fs(16);
+      }// .gnav_link
+    }// .gnav_list
+
+  }// @include mq(tab)
+  @include mq(pc) {
+
+    width: 45vw;
+    padding-top: $header_height_pc;
+
+    .gnav_list {
+      .gnav-sub_btn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }// .gnav-sub_btn
+    }// .gnav_list
+
+  }// @include mq(pc)
+}// .gnav

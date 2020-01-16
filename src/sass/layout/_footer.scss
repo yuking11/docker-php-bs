@@ -1,0 +1,27 @@
+// =====================================================
+//
+// Footer Style
+//
+// =====================================================
+
+// footer
+// ================================== //
+.l-footer {
+
+  background-color: #CCF;
+  padding-right: $ct_gutter * 2;
+  padding-left: $ct_gutter * 2;
+
+  @include mq(sp, max, true) {
+
+    padding-right: $ct_gutter;
+    padding-left: $ct_gutter;
+
+  }// @include mq(sp, max, true)
+  @include mq(tab) {
+  }// @include mq(tab)
+  @include mq(pc) {
+  }// @include mq(pc)
+  @include mq(wide) {
+  }// @include mq(wide)
+}// .l-footer

@@ -1,0 +1,71 @@
+// =====================================================
+//
+// header Style
+//
+// =====================================================
+
+// header
+// ================================== //
+.l-header {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba($color_black, .75);
+  height: $header_height_sp;
+  padding-right: $ct_gutter * 2;
+  padding-left: $ct_gutter * 2;
+  color: $color_white;
+
+  > .l-inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: $ct_gutter_half;
+    padding-bottom: $ct_gutter_half;
+  }// > .l-inner
+
+  .logo {
+    max-width: 35%;
+    height: 100%;
+    .logo_link {
+    }// .logo_link
+    .logo_img {
+      max-width: 100%;
+      max-height: 100%;
+    }// .logo_img
+  }// .logo
+
+  @include mq(sp, max, true) {
+
+    padding-right: $ct_gutter;
+    padding-left: $ct_gutter;
+
+  }// @include mq(sp, max, true)
+  @include mq(tab) {
+
+    .logo {
+      max-width: 35%;
+    }// .logo
+
+  }// @include mq(tab)
+  @include mq(pc) {
+
+    height: $header_height_pc;
+
+    > .l-inner {
+      padding-top: $ct_gutter;
+      padding-bottom: $ct_gutter;
+    }// > .l-inner
+
+    .logo {
+      width: 200px;
+      max-width: inherit;
+    }// .logo
+
+  }// @include mq(pc)
+  @include mq(wide) {
+  }// @include mq(wide)
+}// .l-header

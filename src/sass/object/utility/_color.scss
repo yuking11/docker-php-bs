@@ -1,0 +1,36 @@
+@if $use_css_utility {
+// -------------------------------------------
+// Utility - Color
+// -------------------------------------------
+
+  // font
+  .u-red { color: $color_red !important; };
+  .u-orange { color: $color_orange !important; };
+  .u-yellow { color: $color_yellow !important; };
+  .u-green { color: $color_green !important; };
+  .u-teal { color: $color_teal !important; };
+  .u-blue { color: $color_blue !important; };
+  .u-indigo { color: $color_indigo !important; };
+  .u-purple { color: $color_purple !important; };
+  .u-pink { color: $color_pink !important; };
+  .u-dark { color: $color_dark !important; };
+  .u-light { color: $color_light !important; };
+  .u-black { color: $color_black !important; };
+  .u-white { color: $color_white !important; };
+
+  // background
+  .u-bg_red { background-color: $color_red !important; };
+  .u-bg_orange { background-color: $color_orange !important; };
+  .u-bg_yellow { background-color: $color_yellow !important; };
+  .u-bg_green { background-color: $color_green !important; };
+  .u-bg_teal { background-color: $color_teal !important; };
+  .u-bg_blue { background-color: $color_blue !important; };
+  .u-bg_indigo { background-color: $color_indigo !important; };
+  .u-bg_purple { background-color: $color_purple !important; };
+  .u-bg_pink { background-color: $color_pink !important; };
+  .u-bg_dark { background-color: $color_dark !important; };
+  .u-bg_light { background-color: $color_light !important; };
+  .u-bg_black { background-color: $color_black !important; };
+  .u-bg_white { background-color: $color_white !important; };
+
+}
