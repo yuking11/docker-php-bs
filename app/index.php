@@ -13,5 +13,9 @@
 <h1>docker nginx php-fpm7.2 browser-sync</h1>
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero inventore distinctio, odit cumque illum veniam perferendis voluptates numquam sint, rem alias temporibus omnis accusamus praesentium recusandae culpa ratione officia qui!</p>
 
+<?php
+  phpinfo();
+?>
+
 </body>
 </html>
