@@ -1,6 +1,7 @@
 # Dockerfile Browser-sync Nginx PHP
 
-Docker上にnginx/php-fpm/browser-sync環境を構築するテンプレート
+Docker上にnginx/php-fpm/browser-sync環境を構築するテンプレート。
+ついでにwebpackでsass/jsコンパイル。
 
 ## images
 
@@ -9,6 +10,7 @@ Docker上にnginx/php-fpm/browser-sync環境を構築するテンプレート
 - nginx:latest
 - phpmyadmin/phpmyadmin
 - ustwo/browser-sync
+- node:12.12.0
 
 ## Usage
 
