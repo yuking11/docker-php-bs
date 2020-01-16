@@ -1,6 +1,7 @@
 # Dockerfile Browser-sync Nginx PHP
 
 Docker上にnginx/php-fpm/browser-sync環境を構築するテンプレート。
+
 ついでにwebpackでsass/jsコンパイル。
 
 ## images
@@ -41,13 +42,10 @@ $ docker run -it -v $(pwd):/var/www/html localcomposer:latest /root/.composer/ve
 - root /var/www/html;
 + root /var/www/public;
 
-- # location / {
-- #   try_files $uri /index.php?$args;
-- # }
-+ location / {
-+   try_files $uri /index.php?$args;
-+ }
-
-- try_files                $uri =404;
-+ # try_files                $uri =404;
+  location / {
+-   # try_files $uri $uri/ /index.php?$args;
++   try_files $uri $uri/ /index.php?$args;
+-   try_files $uri $uri/ =404;
++   # try_files $uri $uri/ =404;
+  }
 ```
