@@ -26,14 +26,14 @@ docker-compose up -d
 
 ```sh
 # composerのdockerイメージをbuild
-$ docker build -t localcomposer -f ./composer/composer.dockerfile ./composer
+$ docker build -t localcomposer -f ./docker/composer/Dockerfile ./composer
 ```
 
 ### Laravel
 
 ``` sh
 # ComposerコンテナでLaravel初期プロジェクトを作成
-$ docker run -it -v $(pwd):/var/www/html localcomposer:latest /root/.composer/vendor/bin/laravel new app
+$ docker run -it -v ./app:/var/www/html localcomposer:latest /root/.composer/vendor/bin/laravel new app
 ```
 
 ./docker/nginx/default.conf
