@@ -1,15 +1,16 @@
 {
-  "name": "my_env",
+  "name": "docker-php-bs",
   "version": "1.0.0",
-  "description": "フロントエンド制作・開発用パッケージ",
+  "description": "フロントエンド開発用パッケージ",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack --watch",
-    "build": "webpack --config webpack.prod.js"
+    "watch": "webpack --watch --env=development",
+    "build:dev": "webpack --env=development",
+    "build": "webpack --env=production"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yuking11/my_env.git"
+    "url": "https://github.com/yuking11/docker-php-bs.git"
   },
   "babel": {
     "presets": [
@@ -25,6 +26,7 @@
     "autoprefixer": "^9.4.10",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
+    "file-loader": "^2.0.0",
     "lodash": "^4.17.11",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
@@ -37,8 +39,6 @@
     "sweet-scroll": "^4.0.0",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.29.6",
-    "webpack-cli": "^3.3.10",
-    "webpack-notifier": "^1.7.0",
-    "webpack-stream": "^5.2.1"
+    "webpack-cli": "^3.3.10"
   }
 }

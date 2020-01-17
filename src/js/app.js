@@ -1,5 +1,6 @@
 "use strict";
-// sass
-import '../sass/app';
+
+// scss
+import '../scss/app';
 // js - pages
 import "./_index";

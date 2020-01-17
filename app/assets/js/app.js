@@ -925,10 +925,10 @@ if (document.querySelectorAll('[data-pagetop]')) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _sass_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/app */ "./src/sass/app.scss");
-/* harmony import */ var _sass_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_app__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/app */ "./src/scss/app.scss");
+/* harmony import */ var _scss_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_app__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_index */ "./src/js/_index.js");
- // sass
+ // scss
 
  // js - pages
 
@@ -1197,9 +1197,9 @@ function () {
 
 /***/ }),
 
-/***/ "./src/sass/app.scss":
+/***/ "./src/scss/app.scss":
 /*!***************************!*\
-  !*** ./src/sass/app.scss ***!
+  !*** ./src/scss/app.scss ***!
   \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

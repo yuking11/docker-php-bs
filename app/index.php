@@ -18,11 +18,9 @@
 
   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero inventore distinctio, odit cumque illum veniam perferendis voluptates numquam sint, rem alias temporibus omnis accusamus praesentium recusandae culpa ratione officia qui!</p>
 
-</section>
+  <p>PHP: <?php echo phpversion(); ?></p>
 
-<?php
-  phpinfo();
-?>
+</section>
 
 </body>
 </html>

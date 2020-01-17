@@ -5,6 +5,7 @@ WORKDIR /webpack
 RUN apk update && \
     apk add git && \
     apk add --no-cache curl && \
+    touch ~/.bash_profile && \
     curl -o- -L https://yarnpkg.com/install.sh | sh
 
 ENV PATH $HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH

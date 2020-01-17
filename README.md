@@ -1,8 +1,7 @@
 # Dockerfile Browser-sync Nginx PHP
 
-Docker上にnginx/php-fpm/browser-sync環境を構築するテンプレート。
-
-ついでにwebpackでsass/jsコンパイル。
+Docker上にnginx/php-fpm/browser-sync環境を構築するテンプレート。  
+ついでにwebpackでscss/jsコンパイル。
 
 ## images
 
@@ -22,19 +21,33 @@ docker-compose up -d
 
 ## Option
 
-### Use Composer
+### Webpack Production Build
+
+```sh
+# docker containerにログイン
+docker exec -it docker-nginx-php_webpack_1 sh
+
+# build
+yarn build
+```
+
+### Use Laravel
+
+#### SetUp Composer
 
 ```sh
 # composerのdockerイメージをbuild
 $ docker build -t localcomposer -f ./docker/composer/Dockerfile ./composer
 ```
 
-### Laravel
+#### create Laravel Project
 
 ``` sh
 # ComposerコンテナでLaravel初期プロジェクトを作成
 $ docker run -it -v ./app:/var/www/html localcomposer:latest /root/.composer/vendor/bin/laravel new app
 ```
+
+#### change DocumentRoot
 
 ./docker/nginx/default.conf
 

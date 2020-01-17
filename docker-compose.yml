@@ -51,4 +51,3 @@ services:
       - ./app:/webpack/app
       - ./docker/webpack/package.json:/webpack/package.json
       - ./docker/webpack/webpack.config.js:/webpack/webpack.config.js
-      - ./docker/webpack/webpack.config.prod.js:/webpack/webpack.config.prod.js
