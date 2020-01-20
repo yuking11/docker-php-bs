@@ -21,11 +21,11 @@ export class Utils {
    *
    */
   isTouchDevice() {
-    let result = false;
+    let result = false
     if (window.ontouchstart === null) {
-      result = true;
+      result = true
     }
-    return result;
+    return result
   }// isTouchDevice
 
   /**
@@ -36,8 +36,8 @@ export class Utils {
    *
    */
   getWindowWidth() {
-    let ww = window.innerWidth;
-    return ww;
+    let ww = window.innerWidth
+    return ww
   }// getWindowWidth
 
   /**
@@ -49,7 +49,7 @@ export class Utils {
    *
    */
   mq(size, rule = 'min') {
-    return window.matchMedia('('+rule+'-width: '+size+'px)').matches;
+    return window.matchMedia('('+rule+'-width: '+size+'px)').matches
   }// mq
 
 }

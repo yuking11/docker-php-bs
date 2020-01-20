@@ -51,3 +51,4 @@ services:
       - ./app:/webpack/app
       - ./docker/webpack/package.json:/webpack/package.json
       - ./docker/webpack/webpack.config.js:/webpack/webpack.config.js
+      - ./docker/webpack/.eslintrc.js:/webpack/.eslintrc.js
