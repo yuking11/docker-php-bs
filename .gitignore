@@ -4,6 +4,9 @@
 .env
 !.env.template
 
+# eslint
+!.eslintrc.js
+
 *mysql/
 *phpmyadmin/
 *logs/
