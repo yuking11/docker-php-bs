@@ -7,6 +7,6 @@
 # eslint
 !.eslintrc.js
 
-*mysql/db_data/
+*db_data/
 *phpmyadmin/
 *logs/

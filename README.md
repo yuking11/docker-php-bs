@@ -1,6 +1,7 @@
 # Dockerfile Browser-sync Nginx PHP
 
 Docker上にnginx/php-fpm/browser-sync環境を構築するテンプレート。  
+mysql/phpmyadminもある。  
 ついでにwebpackでscss/jsコンパイル。
 
 ## images
@@ -15,8 +16,14 @@ Docker上にnginx/php-fpm/browser-sync環境を構築するテンプレート。
 ## Usage
 
 ```sh
+# envファイルを作成
 cp .env.template .env
-docker-compose up -d
+
+# 自分用に編集
+vi .env
+
+# docuer立ち上げ
+docker-compose up
 ```
 
 ## Option
@@ -24,14 +31,16 @@ docker-compose up -d
 ### Webpack Production Build
 
 ```sh
-# docker containerにログイン
-docker exec -it docker-nginx-php_webpack_1 sh
+# webpackのcontainerにログイン
+docker exec -it ${PROJECT_NAME}-webpack sh
 
 # build
 yarn build
 ```
 
 ### Use Laravel
+
+delete bs & webpack images in docker-compose.yml
 
 #### SetUp Composer
 
@@ -53,7 +62,7 @@ $ docker run -it -v ./app:/var/www/html localcomposer:latest /root/.composer/ven
 
 ``` diff
 - root /var/www/html;
-+ root /var/www/public;
++ root /var/www/html/public;
 
   location / {
 -   # try_files $uri $uri/ /index.php?$args;

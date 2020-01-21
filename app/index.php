@@ -20,6 +20,27 @@
 
   <p>PHP: <?php echo phpversion(); ?></p>
 
+  <h2 class="u-mt2e">MySQL PDO</h2>
+
+<?php
+  try {
+      # hostには「docker-compose.yml」で指定したコンテナ名を記載
+      $dsn = "mysql:host=db;dbname=test;";
+      $db = new PDO($dsn, 'test', 'test');
+
+      $sql = "SELECT * FROM test";
+      $stmt = $db->prepare($sql);
+      $stmt->execute();
+      $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      echo '<pre>';
+      var_dump($result);
+      echo '</pre>';
+  } catch (PDOException $e) {
+      echo $e->getMessage();
+      exit;
+  }
+?>
+
 </section>
 
 </body>
