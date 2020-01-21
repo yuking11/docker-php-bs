@@ -1,13 +1,14 @@
 version: "3"
 services:
-  mysql:
+  db:
     image: mysql:5.7
     command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
-      - ./docker/mysql:/var/lib/mysql
+      - ./docker/mysql/db_data:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
     env_file: .env
     ports:
-      - 3307:3306
+      - 3306:3306
 
   app:
     build: ./docker/php
